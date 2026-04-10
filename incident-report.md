@@ -20,7 +20,7 @@
 |-------|---------|------------|
 | High SSH Failure Rate | >4 failures in 5 min | ✅ Yes |
 | Success After Failure | Success within 5 min of failures | ✅ Yes |
-| Invalid User Detection | Any invalid username | ✅ Yes |
+
 
 ## Recommendations
 
