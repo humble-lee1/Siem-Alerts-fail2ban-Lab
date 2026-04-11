@@ -340,7 +340,9 @@ maxretry = 3
 | password.txt | Lab folder | Hydra password list |
 | incident-report.md | reports/ | This document |
 
-### B. Screenshot Evidence Index| # | Filename | Content |
+### B. Screenshot Evidence Index
+
+| # | Filename | Content |
 |---|----------|---------|
 | 1 | 01-fail2ban-active.jpg | Fail2ban service status |
 | 2 | 02-failed-attempts.jpg | 5 failed login attempts |
@@ -351,9 +353,10 @@ maxretry = 3
 | 7 | 07-splunk-email-alert-config.jpg | Email alert config |
 | 8 | 08-splunk-failed-login-alert-config.jpg | Failed login alert details |
 | 9 | 09-splunk-success-after-failure-alert-config.jpg | Success-after-failure alert |
-| 10| 10-splunk-failed-alert-received.jpg | Email alert - failures |
-| 11| 11-splunk-success-after-failure-alert-received.jpg | Email alert - compromise |
-| 12| 12-kali-hydra-attack.jpg |attacking machine|
+| 10 | 10-splunk-failed-alert-received.jpg | Email alert - failures |
+| 11 | 11-splunk-success-after-failure-alert-received.jpg | Email alert - compromise |
+| 12 | 12-kali-hydra-attack.jpg | Attacking machine (Kali Hydra) |
+
 ### C. Command Reference
 
 ```bash
