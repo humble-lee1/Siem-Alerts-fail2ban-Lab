@@ -99,8 +99,8 @@ Key Takeaway: While the automated defense system successfully detected and block
 
 | Alert Type | Recipient | Delivery Time | Status |
 |------------|-----------|---------------|--------|
-| High Failure Rate | Analyst email | < 30 seconds | ✅ Delivered |
-| Success After Failure | Analyst email | < 30 seconds | ✅ Delivered |
+| SSH Failed Login| Analyst email | < 30 seconds | ✅ Delivered |
+| SSH Successful Login | Analyst email | < 30 seconds | ✅ Delivered |
 
 Email Content Example:
 Splunk Alert🚨: SSH Failed Login - testuser from 192.168.122.109
