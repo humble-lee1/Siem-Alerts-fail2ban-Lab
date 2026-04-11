@@ -204,7 +204,8 @@ findtime = 86400
 maxretry = 3
 ```
 ------
-📁 Project Structure
+```
+📁 Project Structure.
 siem-alerts-fail2ban-email/
 │
 ├── README.md # Project documentation
@@ -228,7 +229,7 @@ siem-alerts-fail2ban-email/
 │
 └── configs/
 └── jail.local # Fail2ban configuration
- ``   
+ ```   
 --------------------
 ## 📚 Skills Demonstrated
 
