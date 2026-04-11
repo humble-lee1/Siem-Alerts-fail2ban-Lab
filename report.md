@@ -86,8 +86,8 @@ Key Takeaway: While the automated defense system successfully detected and block
 
 | Alert Name | Trigger Condition | Status | Response Time |
 |------------|-------------------|--------|---------------|
-| High SSH Failure Rate | >4 failures/5min | ✅ Triggered | < 1 minute |
-| Success After Failure | Success within 5min of failures | ✅ Triggered | < 1 minute |
+| SSH Failed login | >4 failures/5min | ✅ Triggered | < 1 minute |
+| SSH Successful login | Success within 5min of failures | ✅ Triggered | < 1 minute |
 | Invalid User Detection | Any invalid username | ⚠️ Not triggered | N/A (no invalid user) |
 
 ![Screenshot Evidence](10-splunk-failed-alert-received.jpg)
