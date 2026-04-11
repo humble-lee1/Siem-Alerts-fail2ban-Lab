@@ -185,6 +185,7 @@ enabled = true
 maxretry = 3
 bantime = 7200
 findtime = 300
+```
 ------
 📁 Project Structure
 siem-alerts-fail2ban-email/
@@ -205,6 +206,7 @@ siem-alerts-fail2ban-email/
 │   └── incident-report.md
 └── configs/
     └── jail.local
+ ``   
 --------------------
 
 📚 Skills Demonstrated
@@ -222,11 +224,9 @@ Incident Response
 Real-time alerting, compromise detection
 Technical Documentation
 Professional REA
-
 ----------------------
 🔗 Related Portfolio Projects
 Splunk SSH Brute Force Detection (https://github.com/humble-lee1/splunk-ssh-brute-force-detection) - SIEM dashboard foundation
 Phishing Email Analysis Lab (https://github.com/humble-lee1/phishing-email-analysis-lab) - Incident response methodology
-
 📅 Lab Completion Date
 April 2026
