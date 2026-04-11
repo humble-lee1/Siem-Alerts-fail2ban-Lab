@@ -202,7 +202,7 @@ banaction = iptables-allports
 bantime = 86400
 findtime = 86400
 maxretry = 3
-
+```
 ------
 📁 Project Structure
 siem-alerts-fail2ban-email/
