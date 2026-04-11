@@ -225,21 +225,18 @@ Risk Assessment
 | Persistence | Create Account | T1136 | No monitoring | Monitor useradd commands |
 | Collection | Data Staged | T1074 | No monitoring | Add file integrity monitoring |
 
-### MITRE ATT&CK Coverage Matrix
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                         MITRE ATT&CK Detection Coverage                      │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│  T1110  ████████████████████ 100%  Brute Force                             │
-│  T1110.001 ████████████████████ 100%  Password Guessing                    │
-│  T1087  ████████████████████ 100%  Account Discovery                       │
-│  T1021  ████████████████████ 100%  Remote Services                         │
-│  T1556  ░░░░░░░░░░░░░░░░░░░░   0%  Modify Authentication Process (Gap)    │
-│  T1136  ░░░░░░░░░░░░░░░░░░░░   0%  Create Account (Gap)                    │
-│                                                                             │
-│  Overall Coverage: 4 of 6 techniques (67%)                                  │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
+### MITRE ATT&CK Detection Coverage
+
+| Technique | ID | Coverage | Status |
+|-----------|-----|----------|--------|
+| Brute Force | T1110 | ████████████████████ 100% | ✅ Detected |
+| Password Guessing | T1110.001 | ████████████████████ 100% | ✅ Detected |
+| Account Discovery | T1087 | ████████████████████ 100% | ✅ Detected |
+| Remote Services | T1021 | ████████████████████ 100% | ✅ Detected |
+| Modify Auth Process | T1556 | ░░░░░░░░░░░░░░░░░░░░ 0% | ❌ Gap |
+| Create Account | T1136 | ░░░░░░░░░░░░░░░░░░░░ 0% | ❌ Gap |
+
+Overall Detection Rate: 67% (4 of 6 techniques)
 -----
 ## 🔧 Recommendations
 
