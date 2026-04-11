@@ -178,55 +178,73 @@ Mitigation Strategy:
 | 🟡 LOW | Integrate with SOAR for automated response | TheHive/Cortex | Full automation |
 
 ### Recommended Fail2ban Configuration
+## 📊 Recommended Fail2ban Configuration
 
 ```ini
+[DEFAULT]
+bantime = 7200
+findtime = 300
+maxretry = 3
+
 [sshd]
 enabled = true
+port = ssh
+filter = sshd
+logpath = /var/log/auth.log
 maxretry = 3
 bantime = 7200
 findtime = 300
-```
+
+[recidive]
+enabled = true
+logpath = /var/log/fail2ban.log
+banaction = iptables-allports
+bantime = 86400
+findtime = 86400
+maxretry = 3
+
 ------
 📁 Project Structure
 siem-alerts-fail2ban-email/
-├── README.md                           # Project documentation
-├── password.txt                        # Hydra password list (5 wrong + 1 correct)
+│
+├── README.md # Project documentation
+├── password.txt # Hydra password list (5 wrong + 1 correct)
+│
 ├── screenshots/
-│   ├── 01-fail2ban-active.jpg
-│   ├── 02-failed-attempts.jpg
-│   ├── 03-successful-login.jpg
-│   ├── 04-fail2ban-ban.jpg
-│   ├── 05-fail2ban-status.jpg
-│   ├── 06-splunk-email-alert-config.jpg
-│   ├── 08-splunk-failed-login-alert-config.jpg
-│   ├── 09-splunk-success-after-failure-alert-config.jpg
-│   ├── 10-splunk-failed-alert-received.jpg
-│   └── 11-splunk-success-after-failure-alert-received.jpg
+│ ├── 01-fail2ban-active.jpg
+│ ├── 02-failed-attempts.jpg
+│ ├── 03-successful-login.jpg
+│ ├── 04-fail2ban-ban.jpg
+│ ├── 05-fail2ban-status.jpg
+│ ├── 06-splunk-email-alert-config.jpg
+│ ├── 08-splunk-failed-login-alert-config.jpg
+│ ├── 09-splunk-success-after-failure-alert-config.jpg
+│ ├── 10-splunk-failed-alert-received.jpg
+│ ├── 11-splunk-success-after-failure-alert-received.jpg
+│ └── 12-kali-hydra-attack.jpg
+│
 ├── reports/
-│   └── incident-report.md
+│ └── incident-report.md # Full incident investigation report
+│
 └── configs/
-    └── jail.local
+└── jail.local # Fail2ban configuration
  ``   
 --------------------
+## 📚 Skills Demonstrated
 
-📚 Skills Demonstrated
-Skill Category
-Specific Competencies
-Security Automation
-Fail2ban configuration, automated blocking
-SIEM Engineering
-Splunk alert creation, email integration
-Detection Engineering
-Success-after-failure detection logic
-Threat Analysis
-MITRE ATT&CK mapping, race condition identification
-Incident Response
-Real-time alerting, compromise detection
-Technical Documentation
-Professional REA
+| Skill Category | Specific Competencies |
+|----------------|----------------------|
+| Security Automation | Fail2ban configuration, automated IP blocking |
+| SIEM Engineering | Splunk alert creation, email integration |
+| Detection Engineering | Success-after-failure detection logic |
+| Threat Analysis | MITRE ATT&CK mapping, race condition identification |
+| Incident Response | Real-time alerting, compromise detection |
+| Technical Documentation | Professional README, incident report writing |
+
 ----------------------
 🔗 Related Portfolio Projects
 Splunk SSH Brute Force Detection (https://github.com/humble-lee1/splunk-ssh-brute-force-detection) - SIEM dashboard foundation
 Phishing Email Analysis Lab (https://github.com/humble-lee1/phishing-email-analysis-lab) - Incident response methodology
+
 📅 Lab Completion Date
 April 2026
