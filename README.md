@@ -121,8 +121,8 @@ Critical Finding: The 6th attempt (successful) occurred BEFORE Fail2ban blocked 
 
 | Alert Name | Trigger Condition | Email Severity | Purpose |
 |------------|-------------------|----------------|---------|
-| High SSH Failure Rate | >4 failures in 5 minutes | ⚠️ HIGH | Detect brute force attempts || Success After Failure | Success within 5 min of failures | 🔴 CRITICAL | Identify compromised credentials |
-| Invalid User Detection | Any invalid username attempt | 🟡 MEDIUM | Detect reconnaissance scanning |
+| SSH Failed Login| >4 failures in 5 minutes | ⚠️ HIGH | Detect brute force attempts || Success After Failure | Success within 5 min of failures | 🔴 CRITICAL | Identify compromised credentials |
+| SSH Successful Login | >0 after multiple failure | 🔴CRITICAL| Identify compromised credentials |
 
 ---
 
@@ -138,13 +138,17 @@ Critical Finding: The 6th attempt (successful) occurred BEFORE Fail2ban blocked 
 | Lateral Movement | Remote Services (SSH) | T1021 | SSH login monitoring | ✅ Full |
 
 ### MITRE ATT&CK Detection Coverage
-T1110 ████████████████████ 100% (Brute Force)
-T1110.001 ████████████████████ 100% (Password Guessing)
-T1087 ████████████████████ 100% (Account Discovery)
-T1021 ████████████████████ 100% (Remote Services)
-T1556 ░░░░░░░░░░░░░░░░░░░░ 0% (Modify Auth - Future)
-T1136 ░░░░░░░░░░░░░░░░░░░░ 0% (Create Account - Future)
-Overall Coverage: 4 of 6 techniques (67%)
+
+| Technique | ID | Coverage | Status |
+|-----------|-----|----------|--------|
+| Brute Force | T1110 | ████████████████████ 100% | ✅ Detected |
+| Password Guessing | T1110.001 | ████████████████████ 100% | ✅ Detected |
+| Account Discovery | T1087 | ████████████████████ 100% | ✅ Detected |
+| Remote Services | T1021 | ████████████████████ 100% | ✅ Detected |
+| Modify Auth Process | T1556 | ░░░░░░░░░░░░░░░░░░░░ 0% | ❌ Gap |
+| Create Account | T1136 | ░░░░░░░░░░░░░░░░░░░░ 0% | ❌ Gap |
+
+Overall Detection Rate: 67% (4 of 6 techniques)
 ---
 
 ## ⚠️ Critical Security Finding
