@@ -205,7 +205,7 @@ maxretry = 3
 ```
 ------
 
-📁 Project Structure.
+## 📁 Project Structure.
 ```
 siem-alerts-fail2ban-email/
 │
